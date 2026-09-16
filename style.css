@@ -1,0 +1,860 @@
+/* ========================================
+   BASIC RESET
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BODY
+======================================== */
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #fff9f5 0%,
+            #f8eee8 45%,
+            #eee0d9 100%
+        );
+
+    color: #3d302c;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    padding: 30px 20px;
+}
+
+
+/* ========================================
+   MAIN
+======================================== */
+
+main {
+    width: 100%;
+    max-width: 760px;
+
+    margin: 0 auto;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    text-align: center;
+
+    padding:
+        70px 20px 90px;
+
+    animation:
+        fadeIn 1.5s ease;
+}
+
+
+/* ========================================
+   INTRO TEXT
+======================================== */
+
+.hero > p:first-child {
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #96786d;
+
+    margin-bottom: 28px;
+}
+
+
+/* ========================================
+   MAIN TITLE
+======================================== */
+
+h1 {
+    font-size:
+        clamp(48px, 9vw, 82px);
+
+    font-weight: 400;
+
+    letter-spacing: -3px;
+
+    line-height: 1;
+
+    margin-bottom: 8px;
+}
+
+
+/* ========================================
+   NAME
+======================================== */
+
+h2 {
+    font-size:
+        clamp(38px, 7vw, 62px);
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #90685c;
+
+    margin-bottom: 38px;
+}
+
+
+/* ========================================
+   PHOTO
+======================================== */
+
+.photo-container {
+    width: min(90vw, 420px);
+
+    margin: 0 auto 38px;
+
+    overflow: hidden;
+
+    border-radius: 5px;
+
+    box-shadow:
+        0 18px 45px rgba(70, 45, 35, 0.18);
+
+    position: relative;
+}
+
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.hero > p:nth-of-type(2) {
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    color: #705b53;
+
+    margin-bottom: 42px;
+}
+
+
+/* ========================================
+   BUTTON
+======================================== */
+
+button {
+    background: transparent;
+
+    border: 1px solid #a9897d;
+
+    color: #59433c;
+
+    padding:
+        15px 30px;
+
+    border-radius: 50px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        all 0.35s ease;
+}
+
+
+button:hover {
+    background: #59433c;
+
+    color: #fff9f5;
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px rgba(70, 45, 35, 0.18);
+}
+
+
+/* ========================================
+   BIRTHDAY LETTER
+======================================== */
+
+.letter {
+    display: none;
+
+    padding:
+        20px 0 100px;
+
+    animation:
+        letterReveal 1.2s ease;
+}
+
+
+.letter-inner {
+    background:
+        rgba(255, 252, 249, 0.92);
+
+    border:
+        1px solid rgba(157, 126, 113, 0.28);
+
+    box-shadow:
+        0 25px 70px rgba(70, 45, 35, 0.12);
+
+    padding:
+        65px 55px;
+
+    position: relative;
+}
+
+
+/* ========================================
+   LETTER DECORATION
+======================================== */
+
+.letter-inner::before {
+    content: "✦";
+
+    position: absolute;
+
+    top: 28px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: #a77d6f;
+
+    font-size: 14px;
+}
+
+
+.letter-inner::after {
+    content: "♡";
+
+    position: absolute;
+
+    bottom: 25px;
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    color: #a77d6f;
+
+    font-size: 18px;
+}
+
+
+/* ========================================
+   LETTER LABEL
+======================================== */
+
+.letter-label {
+    text-align: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    color: #9a7a70;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   LETTER TITLE
+======================================== */
+
+.letter h3 {
+    font-size:
+        clamp(32px, 6vw, 45px);
+
+    font-weight: 400;
+
+    font-style: italic;
+
+    color: #60483f;
+
+    margin-bottom: 35px;
+}
+
+
+/* ========================================
+   LETTER CONTENT
+======================================== */
+
+.letter-content {
+    color: #594943;
+
+    font-size: 17px;
+
+    line-height: 2;
+
+    text-align: left;
+}
+
+
+.letter-content p {
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   LETTER ENDING
+======================================== */
+
+.letter-ending {
+    margin-top: 45px;
+
+    text-align: right;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    font-style: italic;
+
+    color: #806258;
+}
+
+
+/* ========================================
+   ANIMATIONS
+======================================== */
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* ========================================
+   LETTER REVEAL ANIMATION
+======================================== */
+
+@keyframes letterReveal {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(60px)
+            scale(0.96);
+
+        filter:
+            blur(4px);
+    }
+
+    60% {
+        opacity: 0.85;
+
+        transform:
+            translateY(-5px)
+            scale(1.01);
+
+        filter:
+            blur(0);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+
+        filter:
+            blur(0);
+    }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    body {
+        padding:
+            15px;
+    }
+
+
+    .hero {
+        padding:
+            55px 10px 70px;
+    }
+
+
+    .photo-container {
+        width: 230px;
+        height: 300px;
+    }
+
+
+    .letter-inner {
+        padding:
+            55px 25px;
+    }
+
+
+    .letter-content {
+        font-size: 16px;
+
+        line-height: 1.9;
+    }
+
+
+    button {
+        font-size: 14px;
+
+        padding:
+            14px 24px;
+    }
+
+}
+
+/* ========================================
+   FLOATING HEARTS
+======================================== */
+
+#hearts-container {
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 10;
+}
+
+
+.floating-heart {
+    position: absolute;
+
+    bottom: -30px;
+
+    color: #b28b80;
+
+    opacity: 0;
+
+    animation-name: floatHeart;
+
+    animation-timing-function: ease-in;
+
+    animation-iteration-count: 1;
+}
+
+
+@keyframes floatHeart {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+    }
+
+    15% {
+        opacity: 0.55;
+    }
+
+    70% {
+        opacity: 0.3;
+    }
+
+    100% {
+        opacity: 0;
+
+        transform:
+            translateY(-110vh)
+            rotate(25deg);
+    }
+
+}
+
+/* ========================================
+   LETTER OPENING EFFECT
+======================================== */
+
+.letter-opening {
+    animation:
+        openingGlow 1.2s ease;
+}
+
+
+@keyframes openingGlow {
+
+    0% {
+        opacity: 0;
+        transform: translateY(60px) scale(0.94);
+        filter: blur(8px);
+    }
+
+    45% {
+        opacity: 0.8;
+        transform: translateY(-8px) scale(1.01);
+        filter: blur(1px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0);
+    }
+
+}
+
+/* ========================================
+   PHOTO CAPTION
+======================================== */
+
+.photo-caption {
+    text-align: center;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    color: #96786d;
+
+    margin-top: -20px;
+
+    margin-bottom: 60px;
+
+    opacity: 0.85;
+}
+
+/* ========================================
+   JARAK KALIMAT & TOMBOL SURAT
+======================================== */
+
+#openLetter {
+    margin-top: 35px !important;
+}
+
+/* ========================================
+   FINAL SCENE
+======================================== */
+
+.final-scene {
+    text-align: center;
+    margin-top: 90px;
+    padding: 80px 20px 100px;
+}
+
+.final-divider {
+    font-size: 22px;
+    color: #96786d;
+    margin-bottom: 35px;
+}
+
+.final-quote {
+    font-size: 17px;
+    font-style: italic;
+    color: #96786d;
+    margin-bottom: 25px;
+}
+
+.final-scene h2 {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 28px;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #4b3832;
+}
+
+.final-heart {
+    font-size: 30px;
+    color: #96786d;
+    margin-top: 55px;
+}
+
+.final-signature {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #6d5148;
+    margin-top: 18px;
+}
+
+#backToTop {
+    margin-top: 45px;
+    padding: 13px 28px;
+
+    border: 1px solid #b99b8f;
+    border-radius: 30px;
+
+    background: transparent;
+    color: #6d5148;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#backToTop:hover {
+    background: #6d5148;
+    color: #fff;
+}
+
+/* ========================================
+   MOBILE OPTIMIZATION
+======================================== */
+
+@media (max-width: 600px) {
+
+    /* Container utama */
+    main {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Judul utama */
+    h1 {
+        font-size: 42px;
+        line-height: 1.15;
+    }
+
+    /* Nama Nadhifa */
+    .name {
+        font-size: 34px;
+    }
+
+    /* Foto */
+    .photo-container {
+        width: 88%;
+        max-width: 380px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Caption foto */
+    .photo-caption {
+        padding: 0 20px;
+        font-size: 12px;
+        margin-bottom: 50px;
+    }
+
+    /* Kalimat sebelum tombol */
+    #openLetter {
+        max-width: 90%;
+        padding: 15px 24px;
+        font-size: 15px;
+    }
+
+    /* Surat */
+    .letter {
+        width: 88%;
+        padding: 45px 25px;
+    }
+
+    /* Isi surat */
+    .letter p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    /* Closing statement */
+    .final-scene {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .final-scene h2 {
+        font-size: 24px;
+        line-height: 1.5;
+    }
+
+    .final-quote {
+        font-size: 15px;
+    }
+
+    /* Tombol kembali */
+    #backToTop {
+        padding: 13px 22px;
+        font-size: 13px;
+    }
+
+}
+
+/* ========================================
+   FOTO - PERTAHANKAN RASIO ASLI
+======================================== */
+
+.photo-container {
+    width: 88%;
+    max-width: 500px;
+    height: auto;
+    overflow: hidden;
+}
+
+.photo-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+
+/* ========================================
+   FOTO - MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .photo-container {
+        width: 88%;
+        max-width: none;
+        height: auto;
+    }
+
+    .photo-container img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+}
+
+/* ========================================
+   CENTER LETTER ON MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+    .letter {
+        width: 92%;
+        margin-left: auto;
+        margin-right: auto;
+        box-sizing: border-box;
+    }
+
+}
+
+/* ========================================
+   LETTER TYPOGRAPHY
+======================================== */
+
+.letter {
+    line-height: 1.8;
+}
+
+.letter p {
+    font-size: 16px;
+    line-height: 1.85;
+    margin-bottom: 26px;
+}
+
+
+/* Opening surat */
+
+.letter p:first-of-type {
+    margin-bottom: 32px;
+}
+
+
+/* Greeting */
+
+.letter .greeting {
+    font-size: 17px;
+    font-style: italic;
+    color: #6d5148;
+}
+
+
+/* ========================================
+   MOBILE LETTER TYPOGRAPHY
+======================================== */
+
+@media (max-width: 600px) {
+
+    .letter {
+        line-height: 1.8;
+    }
+
+    .letter p {
+        font-size: 15px;
+        line-height: 1.85;
+        margin-bottom: 25px;
+    }
+
+    .letter .greeting {
+        font-size: 16px;
+    }
+
+}
+
+/* Personal note */
+
+.special-note {
+    margin: 42px 0;
+    padding: 24px 20px;
+    text-align: center;
+    border-top: 1px solid rgba(139, 105, 92, 0.3);
+    border-bottom: 1px solid rgba(139, 105, 92, 0.3);
+}
+
+.special-note em {
+    font-size: 17px;
+    line-height: 1.9;
+    color: #795b50;
+}
